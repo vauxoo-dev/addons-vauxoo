@@ -70,12 +70,8 @@ class project_issue(osv.Model):
         return issue_ids
 
     _columns = {
-        'analytic_account_id': fields.many2one('project.project',
+        'analytic_account_id': fields.many2one('account.analytic.account',
                                                'Analytic Account',
-                                               help='Project to load '
-                                               'the work in case you '
-                                               'want set timesheet on the task'
-                                               ' related to this issue.')
                                                track_visibility='onchange',
                                                help='Analytic account to '
                                                     'load the work in '
