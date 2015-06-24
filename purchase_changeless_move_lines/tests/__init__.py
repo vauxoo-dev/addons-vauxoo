@@ -23,5 +23,4 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 
-from . import stock_picking
-from . import purchase
+from . import test_change_picking
