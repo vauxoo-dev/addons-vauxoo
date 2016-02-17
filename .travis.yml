@@ -46,6 +46,7 @@ script:
   # If there isn't modules changed for lint checks then exit
   - if [[ "x${INCLUDE_LINT}" == "x" && "${TESTS}" == "0" ]]; then exit 0; fi
   # Travis tests disabled. Travis can't download private repositories.
+  # cambio numero 2
   - if [[ "${TESTS}" == "1" && "${RUNBOT}" != "1" ]]; then exit 0; fi
   - travis_wait travis_run_tests
   # cambio
