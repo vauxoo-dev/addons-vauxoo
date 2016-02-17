@@ -45,3 +45,4 @@ for dirName, subdirList, fileList in os.walk(rootDir):
             # V8.0
 
 print('Found %s modules' % len(modules))
+print('Testing')
