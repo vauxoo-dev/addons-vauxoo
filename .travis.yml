@@ -47,6 +47,7 @@ script:
   # Travis tests disabled. Travis can't download private repositories.
   - if [[ "${TESTS}" == "1" && "${RUNBOT}" != "1" ]]; then exit 0; fi
   - travis_wait travis_run_tests
+  # cambio
 
 after_success:
   - travis_after_tests_success
