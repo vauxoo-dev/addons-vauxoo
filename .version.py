@@ -42,6 +42,7 @@ for dirName, subdirList, fileList in os.walk(rootDir):
             print('Version %s for \t%s' % (version, dirName))
             write_version(pdescriptor)
             # All will be 3.0 on this release then I will increase 1 by one for
-            # V8.0
+            # V8.0.x
 
 print('Found %s modules' % len(modules))
+print('Testing')
