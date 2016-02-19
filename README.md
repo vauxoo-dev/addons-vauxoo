@@ -17,12 +17,12 @@ page](https://github.com/Vauxoo) for such repositories and the utilities where
 this modules are used.
 
 Repositories which we depend from.
----
+----------------------------------
 
 Read the repo_dependencies.txt file for more information. TODO:
 
 Python Libraries which we depend from.
----
+--------------------------------------
 
 Read the requirements.txt file for more information.
 
