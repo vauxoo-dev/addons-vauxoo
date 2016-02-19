@@ -27,7 +27,7 @@ Python Libraries which we depend from.
 Read the requirements.txt file for more information.
 
 Do you want to contribute?
----
+--------------------------
 
 [Read the way](https://github.com/Vauxoo/addons-vauxoo/blob/8.0/CONTRIBUTING.md).
 
