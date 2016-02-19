@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/Vauxoo/addons-vauxoo.svg)](https://travis-ci.org/Vauxoo/addons-vauxoo)
 
 Vauxoo modules for Odoo
-===
+=======================
 
 On this project we try to mantain all our generic modules that can be used as
 little extensions of odoo.
