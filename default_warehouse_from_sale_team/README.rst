@@ -8,7 +8,7 @@ Sales Team Warehouse
 Usage
 =====
 
-Add a field `default_warehouse` in sales team.
+Add a field `default_warehouse_id` in sales team.
 
 Create sort kind of api where any object with field called warehouse_id will
 take the default value from the sales team field
@@ -31,9 +31,9 @@ Currently this default warehouse feature applies for sale.order,
 stock.picking.type and stock.picking.
 
 Also add a new feature for Permissions and Security: Taking advantage of the
-default_warehouse field in the sales team model now we can filter the
+default_warehouse_id field in the sales team model now we can filter the
 records (picking type and picking model) to only show those records that match
-with the user sale teams default_warehouse. To accomplish this I:
+with the user sale teams default_warehouse_id. To accomplish this I:
 
 - add new groups to manage the records access by user:
 
@@ -47,7 +47,7 @@ with the user sale teams default_warehouse. To accomplish this I:
   the teams were the sale user belongs.
 - add new ir.rule records, one for each default warehouse group. This
   one will let us to only show the records for the current user sale
-  teams default_warehouse or to do not take into account the sale teams
+  teams default_warehouse_id or to do not take into account the sale teams
   and show all the records to the user.
 
 To add more models use it simple do this:
@@ -68,7 +68,7 @@ To add more models use it simple do this:
         <field name="name">Limited access to model (filtered by sales teams)</field>
         <field name="model_id" search="[('model','=','model')]" model="ir.model"/>
         <field name="groups" eval"[(6, 0, [ref('xml_id_group')])]/>
-        <field name="domain_force">[('warehouse_id', 'in', [team.default_warehouse.id for team in user.sale_team_ids if team.default_warehouse])]</field>
+        <field name="domain_force">[('warehouse_id', 'in', [team.default_warehouse_id.id for team in user.sale_team_ids if team.default_warehouse_id])]</field>
     </record>
     <record id="rule_group_model_2" model="ir.rule">
         <field name="name">Access to all model</field>

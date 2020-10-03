@@ -20,7 +20,7 @@
      <p class="oe_mt32">
       Add a field
       <cite>
-       default_warehouse
+       default_warehouse_id
       </cite>
       in sales team.
      </p>
@@ -71,9 +71,9 @@ stock.picking.type and stock.picking.
      </p>
      <p class="oe_mt32">
       Also add a new feature for Permissions and Security: Taking advantage of the
-default_warehouse field in the sales team model now we can filter the
+default_warehouse_id field in the sales team model now we can filter the
 records (picking type and picking model) to only show those records that match
-with the user sale teams default_warehouse. To accomplish this I:
+with the user sale teams default_warehouse_id. To accomplish this I:
      </p>
      <ul class="simple">
       <li>
@@ -101,7 +101,7 @@ the teams were the sale user belongs.
       <li>
        add new ir.rule records, one for each default warehouse group. This
 one will let us to only show the records for the current user sale
-teams default_warehouse or to do not take into account the sale teams
+teams default_warehouse_id or to do not take into account the sale teams
 and show all the records to the user.
       </li>
      </ul>
@@ -132,7 +132,7 @@ teams will be able to access only the records related to that warehouses:
     &lt;field name="name"&gt;Limited access to model (filtered by sales teams)&lt;/field&gt;
     &lt;field name="model_id" search="[('model','=','model')]" model="ir.model"/&gt;
     &lt;field name="groups" eval"[(6, 0, [ref('xml_id_group')])]/&gt;
-    &lt;field name="domain_force"&gt;[('warehouse_id', 'in', [team.default_warehouse.id for team in user.sale_team_ids if team.default_warehouse])]&lt;/field&gt;
+    &lt;field name="domain_force"&gt;[('warehouse_id', 'in', [team.default_warehouse_id.id for team in user.sale_team_ids if team.default_warehouse_id])]&lt;/field&gt;
 &lt;/record&gt;
 &lt;record id="rule_group_model_2" model="ir.rule"&gt;
     &lt;field name="name"&gt;Access to all model&lt;/field&gt;
