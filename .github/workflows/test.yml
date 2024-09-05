@@ -74,6 +74,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -U deployv vxci
+          pip3 uninstall requests -yy ; pip3 install requests==2.31.0
           sudo apt update
           sudo apt install dos2unix
       - name: Build image
