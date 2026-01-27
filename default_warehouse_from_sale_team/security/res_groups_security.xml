@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
+    <!-- Category for Default Warehouse groups -->
+    <record id="module_category_default_warehouse" model="ir.module.category">
+        <field name="name">Default Warehouse</field>
+        <field name="sequence">50</field>
+    </record>
+
     <!-- stock picking type -->
     <record id="group_limited_default_warehouse_spt" model="res.groups">
         <field name="name">Limited access to operation types (filtered by sales team)</field>

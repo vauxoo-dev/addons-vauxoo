@@ -7,6 +7,7 @@ from . import ir_sequence
 from . import stock_rule
 from . import purchase_order
 from . import purchase_requisition
+from . import res_groups
 from . import res_users
 from . import sale_order
 from . import sale_order_line

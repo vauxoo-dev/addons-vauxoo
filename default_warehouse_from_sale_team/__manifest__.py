@@ -27,6 +27,11 @@
         "demo/stock_warehouse_demo.xml",
         "demo/crm_team_demo.xml",
     ],
+    "assets": {
+        "web.assets_backend": [
+            "default_warehouse_from_sale_team/static/src/webclient/res_user_group_ids_field.js",
+        ],
+    },
     "images": [
         "static/description/main_screen.png",
     ],
